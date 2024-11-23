@@ -16,6 +16,7 @@ struct sdm_arena_t {
 
 void sdm_arena_init(sdm_arena_t *arena, size_t capacity);
 void *sdm_arena_alloc(sdm_arena_t *arena, size_t size);
+void sdm_arena_free(sdm_arena_t *arena);
 
 #endif // !_SDM_ARENA_H
 

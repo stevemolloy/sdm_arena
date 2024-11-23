@@ -44,4 +44,16 @@ void *sdm_arena_alloc(sdm_arena_t *arena, size_t size) {
   return return_val;
 }
 
+void sdm_arena_free(sdm_arena_t *arena) {
+  if (arena->next) {
+    sdm_arena_free(arena->next);
+  }
+  free(arena->start);
+  arena->start = NULL;
+  arena->capacity = 0;
+  arena->length = 0;
+
+  free(arena->next);
+  arena->next = NULL;
+}
 

@@ -25,6 +25,8 @@ int main(void) {
   printf("original_string => %s\n", original_string);
   printf("new_string      => %s\n", new_string);
 
+  sdm_arena_free(&main_arena);
+
   return 0;
 }
 
