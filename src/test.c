@@ -12,7 +12,7 @@ void *active_alloc(size_t size) {
 #define ALLOC active_alloc
 
 int main(void) {
-  size_t capacity = 4;
+  size_t capacity = 4;   // Too small. Demonstrates the flexibility of the allocation strategy.
   sdm_arena_init(&main_arena, capacity);
 
   char *original_string = "Hello world";
